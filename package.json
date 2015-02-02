@@ -49,7 +49,10 @@
     "ember-cli-esnext": "^0.1.1",
     "broccoli-sass": "^0.3.3",
     "ember-cli-mocha": "^0.2.1",
-    "broccoli-emblem-compiler": "^0.3.19"
+    "broccoli-emblem-compiler": "^0.3.19",
+    "ember-cli-simple-auth": "^0.7.2",
+    "ember-cli-simple-auth-testing": "^0.7.2",
+    "ember-cli-simple-auth-torii": "^0.7.2"
   },
   "dependencies": {}
 }

@@ -1,5 +1,7 @@
 {
   "predef": [
+    "authenticateSession",
+    "invalidateSession",
     "mocha",
     "chai",
     "expect",
