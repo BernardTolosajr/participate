@@ -20,6 +20,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+
     ENV.APP.LOG_RESOLVER = true;
     ENV.APP.LOG_ACTIVE_GENERATION = true;
     ENV.APP.LOG_MODULE_RESOLVER = true;
@@ -37,9 +38,11 @@ module.exports = function(environment) {
     //   'media-src': "'self'"
     // }
     ENV.contentSecurityPolicyHeader = 'Disabled-Content-Security-Policy';
+    
   }
 
   if (environment === 'test') {
+
     // Testem prefers this...
     ENV.baseURL = '/';
     ENV.locationType = 'none';
@@ -52,6 +55,16 @@ module.exports = function(environment) {
     ENV['simple-auth'] = {
       store: 'simple-auth-session-store:ephemeral'
     }
+
+    ENV['torii'] = {
+      providers: {
+        'facebook-oauth2': {
+          apiKey:      '631252926924840',
+          redirectUri: '/'
+        }
+      }
+    };
+
   }
 
   if (environment === 'production') {
