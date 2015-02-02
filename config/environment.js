@@ -38,6 +38,17 @@ module.exports = function(environment) {
     //   'media-src': "'self'"
     // }
     ENV.contentSecurityPolicyHeader = 'Disabled-Content-Security-Policy';
+
+    ENV['torii'] = {
+      providers: {
+        'facebook-oauth2': {
+          apiKey:      '1583083701926004',
+          redirectUri: 'http://localhost:4200/'
+          // redirectUri: this.getURL
+        }
+      }
+      // serverTokenEndpoint: 'http://localhost:3000/token'
+    };
     
   }
 
@@ -59,8 +70,8 @@ module.exports = function(environment) {
     ENV['torii'] = {
       providers: {
         'facebook-oauth2': {
-          apiKey:      '631252926924840',
-          redirectUri: '/'
+          apiKey:      '1583083701926004',
+          redirectUri: 'http://localhost:4200/'
         }
       }
     };

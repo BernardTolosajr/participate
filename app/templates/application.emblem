@@ -8,6 +8,10 @@ header.navigation
         li.nav-link = link-to 'issues' | Issues
 
 section.content
+
+  if session.isAuthenticated
+    | Logged in to Facebook successfully
+  
   =outlet
 
 

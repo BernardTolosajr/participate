@@ -6,6 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('login');
   this.resource('initiatives', function() {
     this.route('new');
     this.resource('initiative', { path: ':initiative_id' }, function() {
