@@ -4,6 +4,9 @@ import { setResolver } from 'ember-mocha';
 
 setResolver(resolver);
 
+import 'simple-auth-testing/test-helpers';
+import Pretender from 'pretender';
+
 document.write('<div id="ember-testing-container"><div id="ember-testing"></div></div>');
 
 $(document).ready(function(){
