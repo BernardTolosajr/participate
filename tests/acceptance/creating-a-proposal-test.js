@@ -16,8 +16,10 @@ describe('Creating a proposal', function() {
 
   beforeEach(function() {
     App = startApp();
+
     server = new Pretender(function() {
       this.post('/proposals', function(request) {
+        console.log(request);
         let body = JSON.parse(request.requestBody),
             data = body.data.attributes;
 
@@ -39,6 +41,8 @@ describe('Creating a proposal', function() {
     });
 
     authenticateSession();
+    currentSession().set('access_token', 'access_token');
+    currentSession().updateStore();
     visit('/proposals/new');
   });
 

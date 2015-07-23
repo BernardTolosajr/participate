@@ -23,7 +23,8 @@
     "currentPath",
     "currentRouteName",
     "authenticateSession",
-    "invalidateSession"
+    "invalidateSession",
+    "currentSession"
   ],
   "node": false,
   "browser": false,

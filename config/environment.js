@@ -57,10 +57,6 @@ module.exports = function(environment) {
   }
 
   if (environment === 'test') {
-    ENV.contentSecurityPolicy['connect-src'] = "'self' http://localhost:3000";
-    ENV.contentSecurityPolicy['default-src'] = "'self'";
-    ENV.contentSecurityPolicy['style-src'] = "'self' data:";
-    // Testem prefers this...
     ENV.baseURL = '/';
     ENV.locationType = 'none';
 
