@@ -11,6 +11,7 @@
     <div class="right menu">
       <div class="ui item">
         {{#if session.isAuthenticated}}
+          <p>Signed in as : {{session.currentUser.name}}</p>
           <a {{ action 'invalidateSession' }}>Logout</a>
         {{/if}}
       </div>
